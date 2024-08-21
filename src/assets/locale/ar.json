@@ -1,0 +1,23 @@
+{
+  "Arabic": "عربي",
+  "English": "إنكليزي",
+  "HOME": {
+    "TITLE": "Hello "
+  },
+  "HEADER": {
+    "NOTIFICATIONTITLE": "لديك 4 رسائل جديده",
+    "NOTIFICATIONALL": "رؤية جميع الرسائل",
+    "TASKSTASK": "مهمه",
+    "TASKSALL": "رؤية جميع المهام",
+    "TASKSEARCH": "بحث ...",
+    "PROFILEPROFILE": "رؤية الملف الشخصي",
+    "PROFILEMYPROFILE": "الملف الشخصي",
+    "PROFILEMYBALANCE": "رصيدي",
+    "PROFILEINBOX": "سجل الوارد",
+    "PROFILEACCOUNTSETTING": "ادارة الحساب",
+    "PROFILELOGOUT": "تسجيل الخروج"
+  },
+  "FOOTER": {
+    "FOOTER": "2024 © Byte System عربي"
+  }
+}

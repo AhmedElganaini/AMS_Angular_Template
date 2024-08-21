@@ -1,0 +1,23 @@
+{
+  "Arabic": "عربي",
+  "English": "إنكليزي",
+  "HOME": {
+    "TITLE": "Hello "
+  },
+  "HEADER": {
+    "NOTIFICATIONTITLE": "You have 4 new messages",
+    "NOTIFICATIONALL": "See all notifications",
+    "TASKSTASK": "Task",
+    "TASKSALL": "See All Tasks",
+    "TASKSEARCH": "Search...",
+    "PROFILEPROFILE": "View Profile",
+    "PROFILEMYPROFILE": "My Profile",
+    "PROFILEMYBALANCE": "My Balance",
+    "PROFILEINBOX": "Inbox",
+    "PROFILEACCOUNTSETTING": "Account Setting",
+    "PROFILELOGOUT": "Logout"
+  },
+  "FOOTER": {
+    "FOOTER": "2024 © Byte System"
+  }
+}
