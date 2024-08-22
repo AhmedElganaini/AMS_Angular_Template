@@ -24,7 +24,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     offIcon="pi pi-language" 
     onIcon="pi pi-language" 
     offIcon="pi pi-language" 
-    styleClass="w-9rem"
+    styleClass="w-9rem" 
     ariaLabel="Do you confirm" />
 
       <!-- <span
