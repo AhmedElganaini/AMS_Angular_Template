@@ -7229,7 +7229,7 @@
     margin-right: 0.5rem;
   }
   .p-panelmenu .p-panelmenu-header .p-panelmenu-header-content .p-panelmenu-header-action .p-menuitem-text {
-    /*line-height: 1.5;*/
+    line-height: 1.5;
   }
   .p-panelmenu .p-panelmenu-content {
     border-radius: 6px;
