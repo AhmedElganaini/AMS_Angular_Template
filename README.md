@@ -17,7 +17,7 @@ We are not actively reviewing or merging pull requests, responding to or resolvi
 To install AMS_Angular_Template you have to use <a href="https://nodejs.org/en">NodeJS</a> NodeJS with last version utilized in the application.
 and install angular ^18
 
-## Key features
+## Key features 2
 
 - The most popular and trusted Angular open source dashboard template is out there. Used by hundreds of thousands developers worldwide and Fortune 500 companies\*.
 - Over 40+ Angular Components and 60+ Usage Examples. Kick off your project and save money by using ngx-admin.
