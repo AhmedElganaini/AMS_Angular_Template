@@ -17,7 +17,11 @@ import { StateService } from '../../../@core/utils';
       </a>
     </div>
     
-    
+      <div class="settings-row">
+    <div class="switcher text-center" >
+      <ngx-layout-direction-switcher></ngx-layout-direction-switcher>
+    </div>
+  </div>
   `,
 })
 export class ThemeSettingsComponent {

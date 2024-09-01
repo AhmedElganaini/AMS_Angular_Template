@@ -8,7 +8,7 @@ import { StateService } from '../../../@core/utils';
   styleUrls: ['./one-column.layout.scss'],
   template: `
     <nb-layout (click)="bodyClick()" [center]="layout.id === 'center-column'" windowMode>
-      <nb-layout-header responsive>
+      <nb-layout-header class="fixed">
         <ngx-header ></ngx-header>
       </nb-layout-header>
 
