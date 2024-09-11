@@ -21,6 +21,18 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+
+import { DialogModule } from 'primeng/dialog';
+import { ToolbarModule } from 'primeng/toolbar';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { DropdownModule } from 'primeng/dropdown';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { FormsModule } from '@angular/forms';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { RippleModule } from 'primeng/ripple';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/locale/', '.json');
 }
@@ -50,6 +62,17 @@ export function createTranslateLoader(http: HttpClient) {
      TagModule, 
      RatingModule,
      CommonModule,
+     DialogModule,
+     RippleModule, 
+    ToolbarModule, 
+   ConfirmDialogModule,
+    InputTextModule, 
+    InputTextareaModule, 
+    DropdownModule,
+    RadioButtonModule, 
+     InputTextModule,
+     FormsModule, 
+     InputNumberModule
   ],
   declarations: [
     MiscellaneousComponent,

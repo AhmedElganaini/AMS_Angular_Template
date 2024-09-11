@@ -302,7 +302,7 @@
   }
 
   .p-component-overlay {
-    background-color: #222b45;
+    background-color: rgba(0, 0, 0, 0.4) !important;
     transition-duration: 0.2s;
   }
 

@@ -19,6 +19,18 @@ import { CardModule } from 'primeng/card';
 import { RatingModule } from 'primeng/rating';
 import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
+import { RippleModule } from 'primeng/ripple';
+
+import { DialogModule } from 'primeng/dialog';
+import { ToolbarModule } from 'primeng/toolbar';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { DropdownModule } from 'primeng/dropdown';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { FormsModule } from '@angular/forms';
+import { InputNumberModule } from 'primeng/inputnumber';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/locale/', '.json');
 }
@@ -39,16 +51,24 @@ export function createTranslateLoader(http: HttpClient) {
     FileUploadModule,
     ToastModule,
     TableModule,
-    FileUploadModule, 
     ButtonModule, 
      ProgressBarModule, 
-     ToastModule, 
      BadgeModule,
      CardModule,
      TagModule, 
      RatingModule,
      CommonModule,
-
+      DialogModule,
+       RippleModule, 
+      ToolbarModule, 
+     ConfirmDialogModule,
+      InputTextModule, 
+      InputTextareaModule, 
+      DropdownModule,
+      RadioButtonModule, 
+       InputTextModule,
+       FormsModule, 
+       InputNumberModule
   ],
   declarations: [
     PagesComponent,
