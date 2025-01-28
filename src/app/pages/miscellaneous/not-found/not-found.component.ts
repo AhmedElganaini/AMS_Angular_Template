@@ -5,10 +5,11 @@ import { NbAuthSocialLink, NbAuthService, NB_AUTH_OPTIONS, NbAuthResult, getDeep
 import { ConfirmationService, MessageService, PrimeNGConfig} from 'primeng/api';
 
 @Component({
-  selector: 'ngx-not-found',
-  styleUrls: ['./not-found.component.scss'],
-  templateUrl: './not-found.component.html',
-  providers: [MessageService, ConfirmationService],
+    selector: 'ngx-not-found',
+    styleUrls: ['./not-found.component.scss'],
+    templateUrl: './not-found.component.html',
+    providers: [MessageService, ConfirmationService],
+    standalone: false
 })
 export class NotFoundComponent {
     productDialog: boolean = false;

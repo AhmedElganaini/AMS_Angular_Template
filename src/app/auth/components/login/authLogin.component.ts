@@ -4,10 +4,11 @@ import { NbAuthSocialLink, NbAuthService, NB_AUTH_OPTIONS, NbAuthResult, getDeep
 
 
 @Component({
-  selector: 'nb-authLogin',
-  styleUrls: ['./authLogin.component.scss'],
-  templateUrl: './authLogin.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'nb-authLogin',
+    styleUrls: ['./authLogin.component.scss'],
+    templateUrl: './authLogin.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class AuthLoginComponent {
 

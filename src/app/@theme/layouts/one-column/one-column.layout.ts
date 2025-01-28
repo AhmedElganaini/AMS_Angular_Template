@@ -4,9 +4,9 @@ import { takeWhile, withLatestFrom, delay } from 'rxjs/operators';
 import { StateService } from '../../../@core/utils';
 
 @Component({
-  selector: 'ngx-one-column-layout',
-  styleUrls: ['./one-column.layout.scss'],
-  template: `
+    selector: 'ngx-one-column-layout',
+    styleUrls: ['./one-column.layout.scss'],
+    template: `
     <nb-layout (click)="bodyClick()" [center]="layout.id === 'center-column'" windowMode>
       <nb-layout-header class="fixed">
         <ngx-header ></ngx-header>
@@ -44,6 +44,7 @@ import { StateService } from '../../../@core/utils';
     </nb-layout>
     <ngx-toggle-settings-button ></ngx-toggle-settings-button>
   `,
+    standalone: false
 })
 export class OneColumnLayoutComponent {
   subMenu: NbMenuItem[] = [

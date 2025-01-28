@@ -10,8 +10,9 @@ import { TranslateService } from '@ngx-translate/core';
 import { NbLayoutDirectionService, NbThemeService } from '@nebular/theme';
 
 @Component({
-  selector: 'ngx-app',
-  template: '<router-outlet></router-outlet>',
+    selector: 'ngx-app',
+    template: '<router-outlet></router-outlet>',
+    standalone: false
 })
 export class AppComponent implements OnInit {
 

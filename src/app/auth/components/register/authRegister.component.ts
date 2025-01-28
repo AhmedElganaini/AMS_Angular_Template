@@ -10,10 +10,11 @@ import { NbAuthSocialLink, NbAuthService, NB_AUTH_OPTIONS, NbAuthResult, getDeep
 
 
 @Component({
-  selector: 'nb-authRegister',
-  styleUrls: ['./authRegister.component.scss'],
-  templateUrl: './authRegister.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'nb-authRegister',
+    styleUrls: ['./authRegister.component.scss'],
+    templateUrl: './authRegister.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class AuthRegisterComponent {
 

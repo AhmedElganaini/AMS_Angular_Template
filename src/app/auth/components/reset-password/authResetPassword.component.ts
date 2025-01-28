@@ -5,10 +5,11 @@ import { NbAuthService, NB_AUTH_OPTIONS, NbAuthResult, getDeepFromObject } from 
 
 
 @Component({
-  selector: 'nb-authResetPassword',
-  styleUrls: ['./authResetPassword.component.scss'],
-  templateUrl: './authResetPassword.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'nb-authResetPassword',
+    styleUrls: ['./authResetPassword.component.scss'],
+    templateUrl: './authResetPassword.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class AuthResetPasswordComponent {
 

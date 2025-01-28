@@ -6,14 +6,15 @@ import { TranslateService } from '@ngx-translate/core';
 import { DataService } from '../services/data.service';
 
 @Component({
-  selector: 'ngx-pages',
-  styleUrls: ['pages.component.scss'],
-  template: `
+    selector: 'ngx-pages',
+    styleUrls: ['pages.component.scss'],
+    template: `
     <ngx-one-column-layout>
       <nb-menu [items]="menu"></nb-menu>
       <router-outlet></router-outlet>
     </ngx-one-column-layout>
   `,
+    standalone: false
 })
 export class PagesComponent {
 

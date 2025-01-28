@@ -1,9 +1,9 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'ngx-switcher',
-  styleUrls: ['./switcher.component.scss'],
-  template: `
+    selector: 'ngx-switcher',
+    styleUrls: ['./switcher.component.scss'],
+    template: `
     <!-- <label class="switch-label" [class.vertical]="vertical">
       <span class="first" [class.active]="vertical || isFirstValue()">
         {{vertical ? currentValueLabel() : firstValueLabel}}
@@ -36,6 +36,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       </span>
     </label> -->
   `,
+    standalone: false
 })
 export class SwitcherComponent {
   @Input() firstValue: any;
