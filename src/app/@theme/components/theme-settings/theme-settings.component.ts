@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 import { StateService } from '../../../@core/utils';
 
 @Component({
-  selector: 'ngx-theme-settings',
-  styleUrls: ['./theme-settings.component.scss'],
-  template: `
+    selector: 'ngx-theme-settings',
+    styleUrls: ['./theme-settings.component.scss'],
+    template: `
     <h6>LAYOUTS</h6>
     <div class="settings-row">
       <a *ngFor="let layout of layouts"
@@ -23,6 +23,7 @@ import { StateService } from '../../../@core/utils';
     </div>
   </div>
   `,
+    standalone: false
 })
 export class ThemeSettingsComponent {
 

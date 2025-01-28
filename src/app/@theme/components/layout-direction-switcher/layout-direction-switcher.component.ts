@@ -6,8 +6,8 @@ import { StateService } from '../../../@core/utils';
 import { MENU_ITEMS_AR, MENU_ITEMS_EN } from '../../../pages/pages-menu';
 import { DataService } from '../../../services/data.service';
 @Component({
-  selector: 'ngx-layout-direction-switcher',
-  template: `
+    selector: 'ngx-layout-direction-switcher',
+    template: `
     <ngx-switcher
       [firstValue]="directions.LTR"
       [secondValue]="directions.RTL"
@@ -19,6 +19,7 @@ import { DataService } from '../../../services/data.service';
     >
     </ngx-switcher>
   `,
+    standalone: false
 })
 export class LayoutDirectionSwitcherComponent implements OnDestroy {
   directions = NbLayoutDirection;

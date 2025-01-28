@@ -3,9 +3,9 @@ import { NbSidebarService } from '@nebular/theme';
 import { StateService } from '../../../@core/utils';
 
 @Component({
-  selector: 'ngx-toggle-settings-button',
-  styleUrls: ['./toggle-settings-button.component.scss'],
-  template: `
+    selector: 'ngx-toggle-settings-button',
+    styleUrls: ['./toggle-settings-button.component.scss'],
+    template: `
     <button class="toggle-settings" id="settingBtnID"
             (click)="toggleSettings()"
             [class.expanded]="expanded"
@@ -15,6 +15,7 @@ import { StateService } from '../../../@core/utils';
       <i class="nb-gear icon-style"></i>
     </button>
   `,
+    standalone: false
 })
 export class ToggleSettingsButtonComponent {
 

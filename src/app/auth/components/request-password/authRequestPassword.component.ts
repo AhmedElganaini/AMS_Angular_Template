@@ -4,10 +4,11 @@ import { NbAuthService, NB_AUTH_OPTIONS, NbAuthResult, getDeepFromObject } from 
 
 
 @Component({
-  selector: 'nb-authRequestPassword',
-  styleUrls: ['./authRequestPassword.component.scss'],
-  templateUrl: './authRequestPassword.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'nb-authRequestPassword',
+    styleUrls: ['./authRequestPassword.component.scss'],
+    templateUrl: './authRequestPassword.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class AuthRequestPasswordComponent {
 
