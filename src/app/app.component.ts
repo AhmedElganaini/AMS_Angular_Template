@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 import { AnalyticsService } from './@core/utils/analytics.service';
 import { SeoService } from './@core/utils/seo.service';
 import { TranslateService } from '@ngx-translate/core';
-import { NbLayoutDirectionService, NbThemeService } from '@nebular/theme';
+import { NbLayoutDirection, NbLayoutDirectionService, NbThemeService } from '@nebular/theme';
 
 @Component({
     selector: 'ngx-app',
@@ -31,14 +31,18 @@ export class AppComponent implements OnInit {
 
   }
   initTranslate() {
-    // Set the default language for translation strings, and the current language.
-    this.translate.setDefaultLang('en');
-    const browserLang = this.translate.getBrowserLang();
-    let direction = this.directionService.getDirection();
-    if (direction.toString() === "rtl") {
+    let userTranslation = localStorage.getItem('userTranslation');
+    userTranslation = (userTranslation) ? userTranslation : 'en';
+    this.translate.setDefaultLang(userTranslation);
+
+    if (userTranslation == "ar") {
+      this.translate.setDefaultLang(userTranslation);
       this.translate.use('ar');
+      this.directionService.setDirection(NbLayoutDirection.RTL);
     } else {
+      this.translate.setDefaultLang(userTranslation);
       this.translate.use('en');
+      this.directionService.setDirection(NbLayoutDirection.LTR);
     }
   }
 }
