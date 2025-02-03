@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 import { MENU_ITEMS_AR, MENU_ITEMS_EN } from './pages-menu';
-import { NbLayoutDirectionService } from '@nebular/theme';
+import { NbLayoutDirection, NbLayoutDirectionService } from '@nebular/theme';
 import { TranslateService } from '@ngx-translate/core';
 import { DataService } from '../services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'ngx-pages',
@@ -18,28 +19,58 @@ import { DataService } from '../services/data.service';
 })
 export class PagesComponent {
 
-  menu = [];
+  menu: any;
+  currentUserInfo: any;
+  currentUserRole: any;
+  directions = NbLayoutDirection;
+   isLocked: boolean = false;
 
   constructor(private translateService: TranslateService,
-    private directionService: NbLayoutDirectionService,
-    private data: DataService) {
-    this.initTranslate();
-    this.secureMenu();
+    private data: DataService,
+    private router: Router) {
   }
+  ngOnInit(): void {
+    this.initTranslate();
+  }
+
+
 
   initTranslate() {
-    this.translateService.setDefaultLang('en');
-    const browserLang = this.translateService.getBrowserLang();
-    let direction = this.directionService.getDirection();
-    direction.toString() === "ar" ? this.menu = MENU_ITEMS_AR : this.menu = MENU_ITEMS_EN;
-    this.translateService.currentLang === 'ar' ? this.menu = MENU_ITEMS_AR : this.menu = MENU_ITEMS_EN;
+    let userTranslation = localStorage.getItem('userTranslation');
+    userTranslation = (userTranslation) ? userTranslation : 'en';
+
+    if (userTranslation == "ar") {
+      this.translateService.use('ar');
+      this.secureMenu(MENU_ITEMS_AR)
+    } else {
+      this.translateService.use('en');
+      this.secureMenu(MENU_ITEMS_EN)
+    }
   }
 
-  secureMenu() {
-    // this.menu = MENU_ITEMS_EN;
-    this.data.isMenuChanger.subscribe(f => this.menu = f)
-  
+  secureMenu(currentMenu: any[]): void {
+    this.menu = currentMenu;
+    this.menu.forEach(item => {
+      // // Initially hide all top-level menu items
+      // item.hidden = true;
 
+      // if (item.children) {
+      //   // Handle children items
+      //   item.children.forEach(child => {
+      //     // Check if child has ariaRole and determine visibility based on permissions
+      //     child.hidden = child.ariaRole ? !this.permissionService.isGranted(child.ariaRole) : false;
+      //   });
+
+      //   // If any child is visible, show the parent item
+      //   item.hidden = !item.children.some(child => !child.hidden);
+      // } else {
+      //   // Determine visibility for top-level items without children
+      //   item.hidden = item.ariaRole ? !this.permissionService.isGranted(item.ariaRole) : false;
+      // }
+    });
+    
     this.data.changMenu(this.menu);
+    this.data.isMenuChanger.subscribe(f => this.menu = f)
   }
+
 }

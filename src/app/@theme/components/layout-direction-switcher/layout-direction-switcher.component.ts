@@ -41,13 +41,38 @@ export class LayoutDirectionSwitcherComponent implements OnDestroy {
   toggleDirection(newDirection) {
     this.directionService.setDirection(newDirection);
     if (newDirection == "rtl") {
+      localStorage.setItem('userTranslation', 'ar');
       this.translate.use('ar');
-      this.data.changMenu(MENU_ITEMS_AR);
+      this.secureMenu(MENU_ITEMS_AR);
     } else {
+      localStorage.setItem('userTranslation', 'en');
       this.translate.use('en');
-      this.data.changMenu(MENU_ITEMS_EN);
+      this.secureMenu(MENU_ITEMS_EN);
 
     }
+  }
+
+  secureMenu(currentMenu) {
+    currentMenu.forEach(item => {
+      // Initially hide all top-level menu items
+      // item.hidden = true;
+
+      // if (item.children) {
+      //   // Handle children items
+      //   item.children.forEach(child => {
+      //     // Check if child has ariaRole and determine visibility based on permissions
+      //     child.hidden = child.ariaRole ? !this.permissionService.isGranted(child.ariaRole) : false;
+      //   });
+
+      //   // If any child is visible, show the parent item
+      //   item.hidden = !item.children.some(child => !child.hidden);
+      // } else {
+      //   // Determine visibility for top-level items without children
+      //   item.hidden = item.ariaRole ? !this.permissionService.isGranted(item.ariaRole) : false;
+      // }
+    });
+
+    this.data.changMenu(currentMenu);
   }
 
   ngOnDestroy() {

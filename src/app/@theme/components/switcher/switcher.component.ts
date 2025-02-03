@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
     selector: 'ngx-switcher',
@@ -38,7 +38,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   `,
     standalone: false
 })
-export class SwitcherComponent {
+export class SwitcherComponent implements OnInit{
+ 
   @Input() firstValue: any;
   @Input() secondValue: any;
 
@@ -51,6 +52,11 @@ export class SwitcherComponent {
   @Output() valueChange = new EventEmitter<any>();
 
   isChecked = false;
+  
+  ngOnInit(): void {
+    this.isChecked =  this.value =="rtl" ? true : false;
+  }
+
   isFirstValue() {
     return this.value === this.firstValue;
   }
