@@ -8,10 +8,10 @@ import { Subject } from 'rxjs';
 import { ThemeService } from '../../service/theme.service';
 
 @Component({
-    selector: 'ngx-header',
-    styleUrls: ['./header.component.scss'],
-    templateUrl: './header.component.html',
-    standalone: false
+  selector: 'ngx-header',
+  styleUrls: ['./header.component.scss'],
+  templateUrl: './header.component.html',
+  standalone: false
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
@@ -81,22 +81,28 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   changeTheme(themeName: string) {
+    
+    if (themeName == "default")
+      themeName = 'dark'
+    else
+      themeName = "default"
     this.themeService.changeTheme(themeName);
 
     this.changePrimeTheme(themeName)
+
 
   }
   changePrimeTheme(theme) {
     switch (theme) {
       case 'default':
-        this.primThemeService.switchTheme('aura-dark-blue','aura-light-blue');
+        this.primThemeService.switchTheme('aura-dark-blue', 'aura-light-blue');
         break;
       case 'dark':
-        this.primThemeService.switchTheme('aura-light-blue','aura-dark-blue');
+        this.primThemeService.switchTheme('aura-light-blue', 'aura-dark-blue');
         break;
 
       default:
-        this.primThemeService.switchTheme('aura-dark-blue','aura-light-blue');
+        this.primThemeService.switchTheme('aura-dark-blue', 'aura-light-blue');
 
         break;
     }
