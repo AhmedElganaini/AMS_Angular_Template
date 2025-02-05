@@ -67,4 +67,36 @@
       display: none;
     }
   }
+
+  .topbar-item{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid var(--border-color);
+    width: 2rem;
+    height: 2rem;
+    transition: outline-color .2s, border-color .2s;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0;
+    outline-color: transparent;
+    background-color: var(--card-background);
+    cursor: pointer;
+
+    display: inline-flex; 
+     align-items: center; 
+     justify-content: center; 
+     flex-shrink: 0; 
+     border: 1px solid var(--border-color); 
+     width: 2rem; 
+     height: 2rem; 
+     transition: outline-color .2s, border-color .2s; 
+     border-radius: 6px; 
+     margin: 0; 
+     padding: 0; 
+     outline-color: transparent; 
+     background-color: var(--card-background); 
+     cursor: pointer;
+  }
 }
